@@ -1,4 +1,5 @@
 using Application;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Api.Controllers
@@ -15,6 +16,7 @@ namespace Api.Controllers
         }
 
         [HttpGet("getAllDevices")]
+        [EnableCors("default")]
         public IActionResult Get()
         {
             return Ok(_deviceService.GetAllDevices());
