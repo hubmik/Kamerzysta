@@ -25,10 +25,5 @@ namespace Application.Services
 
             return cameras;
         }
-
-        private CameraDto EntityToDto(CameraEntity camera)
-        {
-            return new CameraDto();
-        }
     }
 }
