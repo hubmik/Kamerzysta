@@ -8,8 +8,11 @@ namespace Infrastructure
 {
     public class DeviceRepository : IDeviceRepository
     {
-        private const string _path = @"C:\\dev\\Kamerzysta\\Data\cameras-defb.csv";
-
+        private readonly string _path;
+        public DeviceRepository(string path)
+        {
+            _path = path;
+        }
         public List<CameraEntity> GetDevices()
         {
             List<CameraEntity> cameras = new List<CameraEntity>();
